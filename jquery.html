@@ -7,6 +7,24 @@
         .make-blue {
           color: blue;
         }
+        #circle1{
+          height:100px;
+          width:100px;
+          background-color: red;
+          border-radius: 100px;
+        }
+        #circle2{
+          height:100px;
+          width:100px;
+          background-color: red;
+          border-radius: 100px;
+        }
+        #circle3{
+          height:100px;
+          width:100px;
+          background-color: green;
+          border-radius: 100px;
+        }
     </style>
   </head>
   <body>
@@ -17,12 +35,16 @@
     <p>
       <a href="jquery.com">JQuery Docs</a>
     </p>
-    <ul>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-      <li>List item</li>
-    </ul>
+    <!-- Circles -->
+    <div>
+      <div id="circle1"></div><br>
+      <div id="circle2"></div><br>
+      <div id="circle3"></div>
+    </div>
+
+    <button id="on">On Button</button>
+    <button id="off">Off Button</button>
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
       $(document).ready(function(){
@@ -37,6 +59,26 @@
           $(this).slideUp(2000, function(){
             $(this).slideDown(2000);
           });
+        });
+
+      /*  $("#circle3").mouseover(function(){
+          $(this).css("background-color", "red");
+          $(this).css("border-radius", "100px")
+        })
+        .mouseleave(function(){
+          $(this).css("background-color", "green");
+          $(this).css("border-radius", "0px");
+        });*/
+
+        $("#on").click(function(e){
+          $("#circle1").fadeToggle();
+          $("#circle2").fadeToggle();
+          $("#circle3").fadeToggle();
+        });
+        $("#off").click(function(){
+          $("#circle1").slideUp();
+          $("#circle2").slideUp();
+          $("#circle3").slideUp();
         });
       });
     </script>
