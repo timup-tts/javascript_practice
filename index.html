@@ -5,10 +5,10 @@
 </head>
 <body>
 
-<h1>Fun with Javascript</h1>
+<h1>Fun with Javascript - Day 2</h1>
 
 <script>
-  var message = "Hello World!!!zzso!!ZOMG!!!!";
+  // var message = "Hello World!!!zzso!!ZOMG!!!!";
   // this is a string variable
   var x = "Hey ";
 
@@ -18,7 +18,7 @@
   */
   var float = 3.446563463456735613452465234523463456;
   var boolean_var = false;
-  var an_array = [float, message];
+  var an_array = [float];
 
   // hashes
   var capitals = {
@@ -39,7 +39,7 @@
   }
 
   // like 'puts' in ruby
-  console.log("message fo output");
+  // console.log("message fo output");
 
   x = 10;
   var y = 5;
@@ -75,16 +75,57 @@
   x = [1,2,3,4];
 
   for (var i = 0; i < x.length; i++){
-    //alert(x[i]);
+    // alert(x[i]);
   }
-  // JavaScript
+  // JavaScript for each loop
   x.forEach(function (item){
-    alert(item);
+    //  alert(item);
   });
-  // Ruby
+
+  // Ruby each do loop
   // x.each do |item|
   //   puts item
   // end
+
+  var numbers = [1, 2,4, 7, 23, 23, 3, 999999];
+  var i = 0;
+  var found_big_number = false;
+
+  while (!found_big_number) {
+    if (numbers[i] > 10000) {
+      found_big_number = true;
+      // alert(numbers[i] + ' is over 10,000');
+    } else {
+      // alert(numbers[i]);
+      i++;
+    }
+  }
+
+  // function speak() {
+  //   var message = "This is now what I'm saying..."
+  //   alert(message);
+  // }
+
+  function sum(a, b) {
+    return a + b;
+  }
+
+  function addMyNumbers() {
+    var total = 0,
+        i;
+    for (i = 0; i < arguments.length; i++) {
+      total += arguments[i];
+    }
+    alert(total);
+  }
+
+  var quadruple = function (number){
+     return(number * 4);
+  };
+
+  var someNumbers = [1,2,3,4,5];
+
+  someNumbers.forEach(quadruple);
 
 </script>
 
